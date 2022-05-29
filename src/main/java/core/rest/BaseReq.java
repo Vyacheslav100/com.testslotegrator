@@ -12,7 +12,7 @@ public class BaseReq {
     RequestSpecification request = given();
 
     public Response sendGetOAuth(String urn, String token) {
-        request.baseUri(Endpoints.baseUri);
+        request.baseUri(Endpoints.baseUriApi);
         request.log().uri();
         request.auth().preemptive().oauth2(token);
         request.log().headers();
@@ -20,7 +20,7 @@ public class BaseReq {
     }
 
     public Response sendPostBasicAuth(String urn, String basicName, String basicPass, Object body, Boolean isBodyNeed) {
-        request.baseUri(Endpoints.baseUri);
+        request.baseUri(Endpoints.baseUriApi);
         request.log().uri();
         request.auth().preemptive().basic(basicName, basicPass);
         request.log().headers();
@@ -33,7 +33,7 @@ public class BaseReq {
     }
 
     public Response sendPostOAuth(String urn, String token, Object body, Boolean isBodyNeed) {
-        request.baseUri(Endpoints.baseUri);
+        request.baseUri(Endpoints.baseUriApi);
         request.log().uri();
         request.auth().preemptive().oauth2(token);
         request.log().headers();

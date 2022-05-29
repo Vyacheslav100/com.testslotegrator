@@ -1,7 +1,5 @@
 .idea
-.ideaDataSources
+.allure
 *.iml
-*.ipr
-*.iws
 /build/
 target/
